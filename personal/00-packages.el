@@ -5,9 +5,14 @@
                                  solarized-theme
                                  rainbow-delimiters
                                  buffer-move
-                                 exec-path-from-shell
                                  prodigy
                                  ) prelude-packages))
+
+(load-file (expand-file-name
+            (cond ((eq system-type 'windows-nt) "windows-packages.el")
+                  ((eq system-type 'darwin) "mac-packages.el")
+                  (t "default-system-packages.el"))
+            (concat user-emacs-directory "/personal/os")))
 
 ;; Install my packages
 (prelude-install-packages)
