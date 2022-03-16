@@ -6,6 +6,11 @@
                                  rainbow-delimiters
                                  buffer-move
                                  prodigy
+                                 terraform-mode
+                                 jenkinsfile-mode
+                                 keyfreq
+                                 forge
+                                 code-review
                                  ) prelude-packages))
 
 (load-file (expand-file-name

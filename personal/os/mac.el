@@ -1,5 +1,5 @@
 ;; Mac specific config here
-(set-face-attribute 'default nil :font "Menlo" :height 180)
+(set-face-attribute 'default nil :font "Menlo" :height 200)
 
 (x-focus-frame nil) ;; required for proper OSX behavior
 
