@@ -10,3 +10,6 @@
 ;; https://github.com/purcell/exec-path-from-shell
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+
+(add-to-list 'auto-mode-alist '("\\.mm\\'" . objc-mode))
+(add-to-list 'auto-mode-alist '("\\.hh\\'" . objc-mode))

@@ -56,10 +56,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("bc393979763968cba41ca1366ae7ddb2510e034d60a2ef91d145c6d5ed9e3032" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
+   '("bc393979763968cba41ca1366ae7ddb2510e034d60a2ef91d145c6d5ed9e3032" default))
  '(package-selected-packages
-   '(code-review forge keyfreq jenkinsfile-mode terraform-mode zop-to-char zenburn-theme yaml-mode which-key web-mode volatile-highlights undo-tree tide super-save solarized-theme smartrep smartparens rainbow-mode rainbow-delimiters prodigy operate-on-number nlinum move-text magit lsp-ui key-chord json-mode js2-mode imenu-anywhere hl-todo helm-projectile helm-descbinds helm-ag guru-mode go-mode git-timemachine git-modes gist expand-region exec-path-from-shell elisp-slime-nav editorconfig easy-kill dockerfile-mode discover-my-major diminish diff-hl crux counsel company-anaconda cider buffer-move browse-kill-ring anzu ag ace-window))
- '(require-final-newline nil))
+   '(emacs-ccls objc-mode zop-to-char zenburn-theme yaml-mode which-key web-mode volatile-highlights undo-tree terraform-mode super-save solarized-theme smartrep smartparens rainbow-mode rainbow-delimiters projectile prodigy operate-on-number nlinum move-text magit lsp-ui json-mode js2-mode imenu-anywhere hl-todo guru-mode groovy-mode gnu-elpa-keyring-update git-timemachine git-modes gist flycheck expand-region exec-path-from-shell elisp-slime-nav editorconfig easy-kill discover-my-major diminish diff-hl crux counsel company buffer-move browse-kill-ring anzu ag ace-window)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

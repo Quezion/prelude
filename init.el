@@ -39,6 +39,8 @@
 ;; You may delete these explanatory comments.
                                         ;(package-initialize)
 
+(setq package-check-signature nil)
+
 (defvar prelude-user
   (getenv
    (if (equal system-type 'windows-nt) "USERNAME" "USER")))

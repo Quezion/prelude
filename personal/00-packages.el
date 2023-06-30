@@ -7,7 +7,6 @@
                                  buffer-move
                                  prodigy
                                  terraform-mode
-                                 jenkinsfile-mode
                                  keyfreq
                                  forge
                                  code-review
