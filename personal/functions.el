@@ -47,3 +47,18 @@ the current position of point, then move it to the beginning of the line."
         (insert filename)
         (clipboard-kill-region (point-min) (point-max)))
       (message filename))))
+
+;; Project Specific FNs
+
+;; Initializes FTD
+(defun initialize-ftd ()
+  (interactive)
+  (cider-interactive-eval
+   "(require 'moonshot.core)
+    (in-ns 'moonshot.core)
+    (-main)"))
+
+;; NOTE: Makes CIDER autorun this on connect, could potentially break depending on codebase
+(add-hook 'cider-connected-hook (lambda ()
+                                  (if (cl-search "/ftd/" default-directory)
+                                      (initialize-ftd))))

@@ -10,6 +10,7 @@
                                  keyfreq
                                  forge
                                  code-review
+                                 jdecomp
                                  ) prelude-packages))
 
 (load-file (expand-file-name

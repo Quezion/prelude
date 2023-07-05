@@ -13,3 +13,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.mm\\'" . objc-mode))
 (add-to-list 'auto-mode-alist '("\\.hh\\'" . objc-mode))
+
+;; Ensure grep results don't pull in extralong lines & slowdown, only in Mac due to 'cut'
+(grep-compute-defaults)
+(grep-apply-setting 'grep-find-template
+                    (concat grep-find-template " | cut -c 1-2000"))

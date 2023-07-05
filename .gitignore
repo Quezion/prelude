@@ -33,3 +33,4 @@ var/
 .cache/
 .lsp-session*
 *.sqlite
+server/
