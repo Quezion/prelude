@@ -28,11 +28,6 @@
   (global-linum-mode 0))
 (add-hook 'prog-mode-hook 'nolinum)
 
-;; Ensure grep results don't pull in extralong lines & slowdown
-(grep-compute-defaults)
-(grep-apply-setting 'grep-find-template
-                    (concat grep-find-template " | cut -c 1-2000"))
-
 ;; Tell Prelude to stop warning when arrow key is used
 (setq prelude-guru nil)
 
@@ -48,6 +43,8 @@
 
 (add-hook 'before-save-hook 'clojure-only-sort-ns)
 
+(setq auto-save-default nil)
+
 ;; --- CUSTOM PACKAGE AUTOGEN GOBBLYGOOK ---
 
 (custom-set-variables
@@ -56,9 +53,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("bc393979763968cba41ca1366ae7ddb2510e034d60a2ef91d145c6d5ed9e3032" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
+   '("4a1e578e0a0ea7ceb8f73997151fe245e85dfdbddb9b4cebb700a8df7ea76940" "bc393979763968cba41ca1366ae7ddb2510e034d60a2ef91d145c6d5ed9e3032" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
+ '(jdecomp-decompiler-paths '((cfr . "~/qdesktop_files/cfr-0.151.jar")))
+ '(jdecomp-decompiler-type 'cfr)
  '(package-selected-packages
-   '(code-review forge keyfreq jenkinsfile-mode terraform-mode zop-to-char zenburn-theme yaml-mode which-key web-mode volatile-highlights undo-tree tide super-save solarized-theme smartrep smartparens rainbow-mode rainbow-delimiters prodigy operate-on-number nlinum move-text magit lsp-ui key-chord json-mode js2-mode imenu-anywhere hl-todo helm-projectile helm-descbinds helm-ag guru-mode go-mode git-timemachine git-modes gist expand-region exec-path-from-shell elisp-slime-nav editorconfig easy-kill dockerfile-mode discover-my-major diminish diff-hl crux counsel company-anaconda cider buffer-move browse-kill-ring anzu ag ace-window))
+   '(lua-mode ssh-agency code-review forge keyfreq jenkinsfile-mode terraform-mode zop-to-char zenburn-theme yaml-mode which-key web-mode volatile-highlights undo-tree tide super-save solarized-theme smartrep smartparens rainbow-mode rainbow-delimiters prodigy operate-on-number nlinum move-text magit lsp-ui key-chord json-mode js2-mode imenu-anywhere hl-todo helm-projectile helm-descbinds helm-ag guru-mode go-mode git-timemachine git-modes gist expand-region exec-path-from-shell elisp-slime-nav editorconfig easy-kill dockerfile-mode discover-my-major diminish diff-hl crux counsel company-anaconda cider buffer-move browse-kill-ring anzu ag ace-window))
  '(require-final-newline nil))
 
 (custom-set-faces
