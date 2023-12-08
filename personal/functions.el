@@ -62,3 +62,9 @@ the current position of point, then move it to the beginning of the line."
 (add-hook 'cider-connected-hook (lambda ()
                                   (if (cl-search "/ftd/" default-directory)
                                       (initialize-ftd))))
+
+;; BUGFIX for when undo-tree-buffer becomes too big and crashes Emacs on filesave consistently across reloads
+;; see https://stackoverflow.com/questions/12730158/emacs-cleaning-up-undo-tree
+(defun clear-undo-tree ()
+  (interactive)
+  (setq buffer-undo-tree nil))
